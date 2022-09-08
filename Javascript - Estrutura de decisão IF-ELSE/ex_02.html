@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_02</title>
+</head>
+<body>
+    Digite o saldo da conta: <input id="input_saldo">
+    Digite o valor do débito(ou seja, valor a tirar da conta): <input id="input_debito">
+    <button onclick="analisar_conta()">Analisar conta</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+
+var conta = 0;
+
+    function analisar_conta(){
+        conta += Number(input_saldo.value);
+
+        if(conta >= 0){
+            div_resultado.innerHTML = `<b>o saldo atual da conta corrente é ${conta.toFixed(2)}</b>`
+        }
+        div_resultado.innerHTML = `<i>o saldo atual da conta corrente é ${conta.toFixed(2)}</i>`
+    }
+
+</script>
