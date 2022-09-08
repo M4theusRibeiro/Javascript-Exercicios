@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_04</title>
+</head>
+<body>
+    Quantidade de latinhas por dia: <input id="latinhasPorDia">
+    <button onclick="calcularLatinhas()">Quantos refris?</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function calcularLatinhas(){
+        var ano = 365;
+        var latinha = Number(latinhasPorDia.value);
+        var total = ano * latinha;
+
+            resultado.innerHTML = `Você consome cerca ${total} de latinhas por ano. `
+
+        if(total >= 500){
+            resultado.innerHTML += `Cuide melhor da sua saúde!`
+        }
+    }
+</script>
