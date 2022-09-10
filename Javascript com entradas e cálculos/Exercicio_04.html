@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_04</title>
+</head>
+<body>
+    Candidato A:<input id = 'CandidatoA'><br>
+    Candidato B:<input id = 'CandidatoB'><br>
+    Votos inválidos:<input id = 'votosBrancos'><br>
+    Votos brancos:<input id = 'votosNulos'><br>
+    <button onclick="calcEleicao()">Resultado Eleição</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+function calcEleicao(){
+    
+    var A = Number(CandidatoA.value);
+    var B = Number(CandidatoB.value);
+    var Invalidos = Number(votosBrancos.value) + Number(votosNulos.value);
+    var total = A + B + Invalidos
+
+    resultado.innerHTML =
+    `  
+    Total de votos: ${total}<br>
+    Candidato A: ${(A / total)*100}% (${A} votos)<br>
+    Candidato B: ${(B / total)*100}% (${B} votos)<br>
+    Inválidos: ${(Invalidos / total)*100}% (${Invalidos} votos)
+    ` 
+}
+
+</script>

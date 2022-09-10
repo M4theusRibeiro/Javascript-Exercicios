@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_11</title>
+</head>
+<body>
+
+    Digite qualquer número <input id="nQualquer"><br>
+    <button onclick="raizQuadrada()">Exibir sua raiz quadrada</button>
+    <div id="resultadoQuadrada"></div><br>
+    <button onclick="raizCubica()">Exibir sua raiz cúbica</button>
+    <div id="resultadoCubica"></div>
+
+
+    
+</body>
+</html>
+<script>
+
+function raizQuadrada(){
+    var n = Number(nQualquer.value);
+    n = n **(1/2);
+    resultadoQuadrada.innerHTML = `A raiz quadrada é ${n}`
+}
+
+function raizCubica(){
+    var n = Number(nQualquer.value);
+    n = n **(1/3);
+    resultadoCubica.innerHTML = `A raiz cúbica é ${n}`
+}
+</script>

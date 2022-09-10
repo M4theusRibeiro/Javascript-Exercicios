@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_16</title>
+</head>
+<body>
+    
+<b>Valor da passagem é de R$4,40</b>
+<button onclick="oito()">08 passagens</button>
+<button onclick="vinte()">20 passagens</button>
+<button onclick="cinquenta()">50 passagens</button>
+<div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+function oito(){
+    var viagens = 8;
+    var desconto = ((35.20/32.45) -1)*100 ;
+    var bonus = (35.20-32.45)/ 4.4;
+
+    resultado.innerHTML =
+    `Ao comprar ${viagens} passagens, você pagou ${desconto}% a menos. É como se tivesse ganhado ${bonus} passagens de bônus`;
+}
+function vinte(){
+    var viagens = 20;
+    var desconto = ((88/78.65) -1)*100 ;
+    var bonus = (88-78.65)/ 4.4;
+
+    resultado.innerHTML =
+    `Ao comprar ${viagens} passagens, você pagou ${desconto}% a menos. É como se tivesse ganhado ${bonus} passagens de bônus`;
+}
+function cinquenta(){
+    var viagens = 50;
+    var desconto = ((220/191.41) -1)*100 ;
+    var bonus = (220-191.41)/ 4.4;
+
+    resultado.innerHTML =
+    `Ao comprar ${viagens} passagens, você pagou ${desconto}% a menos. É como se tivesse ganhado ${bonus} passagens de bônus`;
+}
+</script>

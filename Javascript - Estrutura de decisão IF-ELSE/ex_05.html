@@ -7,6 +7,25 @@
     <title>ex_05</title>
 </head>
 <body>
-    
+
+    Digite a frequência do aluno: <input id="inputFreq">
+    <button onclick="analisar()">Analisar frequência</button><br>
+    <div id="divResultado"></div>
+<div><img src="" alt=""></div>
 </body>
 </html>
+
+<script>
+
+function analisar(){
+    var freqAluno = Number(inputFreq.value);
+    if (freqAluno < 50){
+       divResultado.innerHTML = `<img src="https://s.calendarr.com/upload/datas/di/at/dia-turista_c.jpg?auto_optimize=low&width=640" alt="https://img.freepik.com/fotos-gratis/turista-que-corre-rapido_1368-7021.jpg?w=2000" />`
+    }
+    else{
+        divResultado.innerHTML = `<img src="https://img.freepik.com/fotos-gratis/alunos-na-licao_1098-15893.jpg?size=626&ext=jpg" alt="https://educador360.com/wp-content/uploads/2018/05/tipos-de-alunos-thumb-recuperado.jpg" />`
+    }
+}
+
+
+</script>

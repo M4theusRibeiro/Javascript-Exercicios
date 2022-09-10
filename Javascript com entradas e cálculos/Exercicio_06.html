@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_06</title>
+</head>
+<body>
+    Digite o sabor da pizza:<input id="saborPizza"><br>
+    Digite o valor da pizza:<input id="valorPizza"><br>
+    Digite quantos amigos vão comer:<input id="qtdAmigos"><br>
+    <button onclick="calcular()">Ver valor por amigo</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var amigos = Number(qtdAmigos.value);
+        var pizza = Number(valorPizza.value);
+        var caixinha = pizza *0.1;
+        var total = (caixinha + pizza)/amigos;
+        resultado.innerHTML =
+        `
+        Cada amigo vai colaborar com R$${total} para a pizza de ${saborPizza.value}.
+        `
+    }
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_13</title>
+</head>
+<body>
+
+    Digite um número: <input id="n1"><br>
+    Digite outro número: <input id="n2"><br>
+    <button onclick="calcRaiz()">Calcular Raiz</button><br>
+    <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+function calcRaiz(){
+    n1 = Number(n1.value);
+    n2 = Number(n2.value);
+    total = n2**(1/n1);
+
+resultado.innerHTML =
+    `A ${n1} raiz de ${n2} dá ${total}`
+}
+
+</script>

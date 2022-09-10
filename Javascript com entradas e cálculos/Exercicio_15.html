@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_15</title>
+</head>
+<body>
+    
+    Digite o valor do carro a vista: <input id="carroAvista"><br>
+    Digite a taxa de juros ao mês: <input id="jurosAomes"><br>
+    Digite a quantidade de parcelas: <input id="totalParcelas"><br>
+    <button onclick="calcular()">Calcular Prejú</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+function calcular(){
+    var parcelas = Number(totalParcelas.value);
+    var avista = Number(carroAvista.value);
+    var juros = Number(jurosAomes.value);
+    var termo = avista / parcelas;
+    var razao = 1 + juros / 100 ;
+
+    pg = termo * (razao **(parcelas-1));
+
+    var primeiroMes = avista - (avista * 0.2)
+    var qtdCarros = pg*avista;
+
+    resultado.innerHTML = 
+    ` Seu carro vai sair por um total de R$${pg}. Após 1 mês, ele já vai valer só R$${primeiroMes}. Porque comprou financiado, vai pagar o correspondente a ${qtdCarros} carros;parcelas ${parcelas} avista ${avista} termo ${termo}`
+}
+
+</script>

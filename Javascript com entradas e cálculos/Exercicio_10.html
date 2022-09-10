@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_10</title>
+</head>
+<body>
+    
+    Digite o raio da circunferência: <input id="raio"><br>
+    <button onclick="calcArea()">Calcular Área</button><br>
+    <div id = 'resultado'></div>
+
+</body>
+</html>
+
+<script>
+
+    function calcArea(){
+        raio = Number(raio.value);
+        area = 3.14 * raio ** 2;
+
+        resultado.innerHTML =`
+        A área da circunferência é ${area}
+        `
+    }
+</script>

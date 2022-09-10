@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_03</title>
+</head>
+<body>
+    <input id="qtdSono">
+    <button onclick="calcSono()">Calcular Sono</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+
+    function calcSono(){
+    var sono = Number(qtdSono.value)
+    resultado.innerHTML =
+    `
+    ${sono * 0.05} horas na <b>fase 1</b><br>
+    ${sono * 0.45} horas na <b>fase 2</b><br>
+    ${sono * 0.30} horas na <b>fase 3</b><br>
+    ${sono * 0.2} horas na <b>fase REM</b>
+    `
+    }
+</script>
