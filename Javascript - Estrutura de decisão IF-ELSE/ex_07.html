@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_07</title>
+</head>
+<body>
+
+    Por quanto tempo o arroz ficou cozinhando: <input id="inputArroz"><br>
+    <button onclick="provar()">Provar arroz</button>
+    <div id="divResultado"></div>
+
+</body>
+</html>
+
+<script>
+
+function provar(){
+
+    var cozimento = Number(inputArroz.value);
+
+    if(cozimento == 5){
+        divResultado.innerHTML = `<p>Parabéns! Arroz perfeito!</p><br><img src="https://nacozinhadahelo.com.br/wp-content/uploads/2017/09/foto-do-arroz-substituir-a-do-site.jpg" alt="" />`
+    } else{
+       if(cozimento > 5){
+        divResultado.innerHTML = `<p>Arroz cozido demais!</p><br><img src="https://espacogourmet.meionorte.com/wp-content/uploads/2017/03/arroz-queimado-1110x400-1280x720.jpg" alt="" />`
+
+       } else{
+        divResultado.innerHTML = `<p>Arroz cru demais!</p><br><img src="https://www.wikihow.com/images_en/thumb/0/0c/Fix-Soggy-Rice-Step-2-Version-2.jpg/550px-nowatermark-Fix-Soggy-Rice-Step-2-Version-2.jpg" alt="" />`
+       }
+    }
+}
+
+</script>

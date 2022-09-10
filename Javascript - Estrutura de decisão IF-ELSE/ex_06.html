@@ -7,6 +7,22 @@
     <title>ex_06</title>
 </head>
 <body>
-    
+    Digite a temperatura do ambiente: <input id="inputTemp"><br>
+    <button onclick="verificacao()">Verificar clima</button><br>
+    <div id="resultado"></div>
+
 </body>
 </html>
+
+<script>
+
+    function verificacao(){
+        var temperatura = Number(inputTemp.value);
+            if(temperatura < 10){
+                resultado.innerHTML = `<p>Apropriada p/ conservar alimento</p><br> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4PqCqobmjasF013jSqSdgm_T9vdxI9FPyRKikmIMyyqqOcTtG_iV47NNxaqlvvR01pfc&usqp=CAU" alt="">`
+            } else{
+                resultado.innerHTML = `<p>Inapropriada p/ conservar alimento</p><br> <img src="https://thumbs.dreamstime.com/b/maçã-podre-9188769.jpg" alt="">`
+            }
+    }
+
+</script>

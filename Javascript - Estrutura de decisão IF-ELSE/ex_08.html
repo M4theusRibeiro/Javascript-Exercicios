@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_08</title>
+</head>
+<body>
+
+    Quantidade de partidas que o atacante jogou: <input id="inputPartidas"><br>
+    Quantidade de gols marcados: <input id="inputGols"><br>
+    <button onclick="estudar()">Estudar atacante</button>
+    <div id="divResultado"></div>
+
+</body>
+</html>
+
+<script>
+
+    function estudar(){
+        var partidasJogadas = Number(inputPartidas.value);
+        var golsMarcados = Number(inputGols.value);
+        var media = golsMarcados / partidasJogadas;
+   
+            if(media < 0.2){
+                divResultado.innerHTML = `<p>Melhor mudar de posição</p><br> <img src="https://coisasdofuteboldotnet.files.wordpress.com/2016/03/hqdefault-1.jpg?w=640" alt="" /><br><p>Sua média de gols/partida é de ${media.toFixed(1)}</p>`
+
+            } else{
+                if( media < 0.6){
+                    divResultado.innerHTML = 
+                    `<p>Atacante mediano</p><br> <img src="https://i.superesportes.com.br/UxkInZNyw3nqhl5XY0J3MyEYY3E=/750x0/smart/imgsapp.mg.superesportes.com.br/app/noticia_126420360808/2019/11/22/3321247/20191121195048821675e.jpg" alt="" /><br><p>Sua média de gols/partida é de ${media.toFixed(1)}</p>`
+                } else{
+                    divResultado.innerHTML = `<p>Atacante de futuro</p><br> <img src="https://cdn.espn.com.br/image/wide/622_3e0bba00-386d-4025-b963-0c081ab6f8c4.jpg" alt="" /><br><p>Sua média de gols/partida é de ${media.toFixed(1)}</p>`
+
+                }
+            }
+    }
+
+</script>
