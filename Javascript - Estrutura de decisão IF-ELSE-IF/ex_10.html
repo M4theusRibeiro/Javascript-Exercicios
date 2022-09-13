@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_10</title>
+</head>
+<body>
+    
+<button onclick="nota1()">Nota 1</button>
+<button onclick="nota2()">Nota 2</button>
+<button onclick="nota3()">Nota 3</button>
+<button onclick="nota4()">Nota 4</button>
+<button onclick="nota5()">Nota 5</button><br>
+Sua avaliação:<span id="spanNota">0</span>
+<div id="divResultado"></div>
+
+</body>
+</html>
+
+<script>
+
+var cliques = 0;
+var nota = 0;
+var media = 0;
+
+function nota1(){
+    cliques += 1;
+    nota += 1;
+    media = nota / cliques;
+    spanNota.innerHTML = media.toFixed(2);
+    if(media < 2){
+        divResultado.innerHTML = `<img src="https://conteudo.imguol.com.br/c/entretenimento/54/2018/06/17/bebe-1529258521708_v2_615x300.jpg" alt="" />`
+    } else if(media < 3){
+        divResultado.innerHTML = `<img src="https://www.psicologo.com.br/wp-content/uploads/sou-uma-pessoa-boa-ou-nao.jpg" alt="" />`
+    } else if(media < 4.5){
+        divResultado.innerHTML = `<img src="https://marketingdigital.com.br/wp-content/uploads/emoji-feliz.jpg" alt="" />`
+    } else {
+        divResultado.innerHTML = `<img src="https://imagens.ebc.com.br/gs4SfSlOCHHzc3M9jLko2zwRhBY=/700x368/smart/https://memoria.ebc.com.br/sites/_portalebc2014/files/atoms_image/crianca_brincando.jpg" alt="" />`
+ }
+}
+function nota2(){
+    cliques += 1;
+    nota += 2;
+    media = nota / cliques;
+    spanNota.innerHTML =media.toFixed(2);
+    if(media < 2){
+        divResultado.innerHTML = `<img src="https://conteudo.imguol.com.br/c/entretenimento/54/2018/06/17/bebe-1529258521708_v2_615x300.jpg" alt="" />`
+    } else if(media < 3){
+        divResultado.innerHTML = `<img src="https://www.psicologo.com.br/wp-content/uploads/sou-uma-pessoa-boa-ou-nao.jpg" alt="" />`
+    } else if(media < 4.5){
+        divResultado.innerHTML = `<img src="https://marketingdigital.com.br/wp-content/uploads/emoji-feliz.jpg" alt="" />`
+    } else {
+        divResultado.innerHTML = `<img src="https://imagens.ebc.com.br/gs4SfSlOCHHzc3M9jLko2zwRhBY=/700x368/smart/https://memoria.ebc.com.br/sites/_portalebc2014/files/atoms_image/crianca_brincando.jpg" alt="" />`
+ }
+}
+function nota3(){
+    cliques += 1;
+    nota += 3;
+    media = nota / cliques;
+    spanNota.innerHTML = media.toFixed(2);
+    if(media < 2){
+        divResultado.innerHTML = `<img src="https://conteudo.imguol.com.br/c/entretenimento/54/2018/06/17/bebe-1529258521708_v2_615x300.jpg" alt="" />`
+    } else if(media < 3){
+        divResultado.innerHTML = `<img src="https://www.psicologo.com.br/wp-content/uploads/sou-uma-pessoa-boa-ou-nao.jpg" alt="" />`
+    } else if(media < 4.5){
+        divResultado.innerHTML = `<img src="https://marketingdigital.com.br/wp-content/uploads/emoji-feliz.jpg" alt="" />`
+    } else {
+        divResultado.innerHTML = `<img src="https://imagens.ebc.com.br/gs4SfSlOCHHzc3M9jLko2zwRhBY=/700x368/smart/https://memoria.ebc.com.br/sites/_portalebc2014/files/atoms_image/crianca_brincando.jpg" alt="" />`
+ }
+}
+function nota4(){
+    cliques += 1;
+    nota += 4;
+    media = nota / cliques;
+    spanNota.innerHTML = media.toFixed(2);
+    if(media < 2){
+        divResultado.innerHTML = `<img src="https://conteudo.imguol.com.br/c/entretenimento/54/2018/06/17/bebe-1529258521708_v2_615x300.jpg" alt="" />`
+    } else if(media < 3){
+        divResultado.innerHTML = `<img src="https://www.psicologo.com.br/wp-content/uploads/sou-uma-pessoa-boa-ou-nao.jpg" alt="" />`
+    } else if(media < 4.5){
+        divResultado.innerHTML = `<img src="https://marketingdigital.com.br/wp-content/uploads/emoji-feliz.jpg" alt="" />`
+    } else {
+        divResultado.innerHTML = `<img src="https://imagens.ebc.com.br/gs4SfSlOCHHzc3M9jLko2zwRhBY=/700x368/smart/https://memoria.ebc.com.br/sites/_portalebc2014/files/atoms_image/crianca_brincando.jpg" alt="" />`
+ }
+}
+function nota5(){
+    cliques += 1;
+    nota += 5;
+    media = nota / cliques;
+    spanNota.innerHTML = media.toFixed(2);
+    if(media < 2){
+        divResultado.innerHTML = `<img src="https://conteudo.imguol.com.br/c/entretenimento/54/2018/06/17/bebe-1529258521708_v2_615x300.jpg" alt="" />`
+    } else if(media < 3){
+        divResultado.innerHTML = `<img src="https://www.psicologo.com.br/wp-content/uploads/sou-uma-pessoa-boa-ou-nao.jpg" alt="" />`
+    } else if(media < 4.5){
+        divResultado.innerHTML = `<img src="https://marketingdigital.com.br/wp-content/uploads/emoji-feliz.jpg" alt="" />`
+    } else {
+        divResultado.innerHTML = `<img src="https://imagens.ebc.com.br/gs4SfSlOCHHzc3M9jLko2zwRhBY=/700x368/smart/https://memoria.ebc.com.br/sites/_portalebc2014/files/atoms_image/crianca_brincando.jpg" alt="" />`
+ }
+}
+
+
+</script>

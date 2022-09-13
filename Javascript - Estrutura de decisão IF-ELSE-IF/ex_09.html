@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_09</title>
+</head>
+<body>
+    
+Você já clicou <span id="spanCliques"><b>0</b></span><br>
+<button onclick="contador()">Clica aqui</button>
+<div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+var cliques = 0;
+    function contador(){
+        cliques += 1;
+        spanCliques.innerHTML = cliques;
+        if(cliques < 5){
+            divResultado.innerHTML = `Dedo fraquinho, hein ;(`
+        }else if(cliques < 10){
+            divResultado.innerHTML = `Na média - não me impressiona ...`
+        }else if(cliques < 15){
+            divResultado.innerHTML = `Está treinando em casa !`
+        }else{
+            divResultado.innerHTML = `Mestre dos cliques !!!`
+        }
+    }
+</script>

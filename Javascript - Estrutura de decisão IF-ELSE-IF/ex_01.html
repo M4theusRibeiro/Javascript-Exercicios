@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_01</title>
+</head>
+<body>
+    
+Digite a altura do jogador: <input id="inputAltura"><br>
+<button onclick="verificarEsportes()">Quais esportes ?</button>
+<div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+function verificarEsportes(){
+
+    var altura = Number(inputAltura.value);
+
+    if(altura <= 1.65){
+        divResultado.innerHTML = ` Você pode ser piloto de corrida`
+
+    }else if(altura <= 1.8){
+        divResultado.innerHTML = ` Você pode ser jogador de futebol`
+    }else{
+        divResultado.innerHTML = ` Você pode ser jogador de vôlei ou basquete`
+    }
+}
+
+</script>

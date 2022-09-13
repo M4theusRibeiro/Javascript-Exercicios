@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_06</title>
+</head>
+<body>
+    Digite o peso da criança: <input id="inputPeso"><br>
+    <button onclick="verificarPeso()">Verificar peso</button>
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+function verificarPeso(){
+
+    var peso = Number(inputPeso.value);
+
+    if(peso <= 13.5){
+        divResultado.innerHTML = `Abaixo do peso`
+    } else if(peso == 18.3){
+        divResultado.innerHTML = `Peso perfeito` 
+    } else if(peso < 21.2){
+        divResultado.innerHTML = `Peso na média` 
+    } else{
+        divResultado.innerHTML = `Acima do peso`
+    }
+}
+    
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_02</title>
+</head>
+<body>
+    Digite a sua renda familiar mensal: <input id="inputRenda"><br>
+    <button onclick="calcularRenda()">Verificar situação</button> 
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+function calcularRenda(){
+
+    var rendaMensal = Number(inputRenda.value);
+
+    if(rendaMensal <=250){
+        divResultado.innerHTML = `Classe E`
+    } else if(rendaMensal <= 900){
+        divResultado.innerHTML = `Classe D`
+    } else if(rendaMensal <= 2500){
+        divResultado.innerHTML = `Classe C`
+    } else if(rendaMensal <= 9500){
+        divResultado.innerHTML = `Classe B`
+    } else{
+        divResultado.innerHTML = `Classe A`
+    }
+
+}
+
+
+</script>
