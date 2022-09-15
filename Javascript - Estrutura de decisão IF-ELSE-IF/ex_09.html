@@ -22,9 +22,9 @@ var cliques = 0;
         spanCliques.innerHTML = cliques;
         if(cliques < 5){
             divResultado.innerHTML = `Dedo fraquinho, hein ;(`
-        }else if(cliques < 10){
+        }else if(cliques <= 10){
             divResultado.innerHTML = `Na média - não me impressiona ...`
-        }else if(cliques < 15){
+        }else if(cliques <= 15){
             divResultado.innerHTML = `Está treinando em casa !`
         }else{
             divResultado.innerHTML = `Mestre dos cliques !!!`

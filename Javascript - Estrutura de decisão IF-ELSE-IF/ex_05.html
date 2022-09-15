@@ -21,11 +21,11 @@ function verTemperatura(){
 
     if(temperatura < 14){
         divResultado.innerHTML = `Congelante `
-    } else if(temperatura < 21){
+    } else if(temperatura <= 21){
         divResultado.innerHTML = `Com Frio` 
-    } else if(temperatura < 24){
+    } else if(temperatura <= 24){
         divResultado.innerHTML = `Confortável`
-    } else if(temperatura < 31){
+    } else if(temperatura <= 31){
         divResultado.innerHTML = `Com Calor`
     } else{
         divResultado.innerHTML = `Calor escaldante`
