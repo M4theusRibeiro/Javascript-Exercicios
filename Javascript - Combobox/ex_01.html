@@ -31,35 +31,17 @@
 <script>
 
     function verEstacao(){
+        var estacao = cbEstacoes.value;
 
-        var mes = 
-        
-
-        if(select == "janeiro"){
-        estacoes.innerHTML =`<img src="https://static.escolakids.uol.com.br/2020/07/frio-extremo.jpg" alt="">`
-    }   else if(select == "fevereiro"){
-        estacoes.innerHTML =`<img src="https://static.escolakids.uol.com.br/2020/07/frio-extremo.jpg" alt="">`
-    }   else if(select == "marco"){
-        estacoes.innerHTML =`<img src="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg" alt="">`
-    }   else if(select == "abril"){
-        estacoes.innerHTML =`<img src="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg" alt="">`
-    }   else if(cbEstacoes.opcaoValor == "maio"){
-        estacoes.innerHTML =`<img src="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg" alt="">`
-    }   else if(select == "junho"){
-        estacoes.innerHTML =`<img src="https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg" alt="">`
-    }   else if(select  == "julho"){
-        estacoes.innerHTML =`<img src="https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg" alt="">`
-    }   else if(cbEstacoes.opcaoValor == "agosto"){
-        estacoes.innerHTML =`<img src="https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg" alt="">`
-    }   else if(select == "setembro"){
-        estacoes.innerHTML =`<img src="https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg" alt="">`
-    }   else if(select == "outubro"){
-        estacoes.innerHTML =`<img src="https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg" alt="">`
-    }   else if(select == "novembro"){
-        estacoes.innerHTML =`<img src="https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg" alt="">`
-    }   else if(select == "dezembro"){
-        estacoes.innerHTML =`<img src="https://static.escolakids.uol.com.br/2020/07/frio-extremo.jpg" alt="">`
-    }
-        
-    }
+        if(estacao == "inverno"){
+        estacoes.innerHTML =`<img src="https://static.escolakids.uol.com.br/2020/07/frio-extremo.jpg">`
+    }   else if(estacao == "primavera"){
+        estacoes.innerHTML =`<img src="https://s2.static.brasilescola.uol.com.br/img/2019/09/primavera.jpg">`
+    }   else if(estacao == "verao"){
+        estacoes.innerHTML =`<img src="https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg">`
+    }   else {
+        estacoes.innerHTML =`<img src="https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg">`
+    }   
+}
+    
 </script>

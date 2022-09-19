@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_12</title>
+</head>
+<body>
+    Informe um valor de ano: <input id="inputAno">
+    <div id="divResultado"></div>
+    <button onclick="mostrarFato()">Ver fato</button>
+</body>
+</html>
+
+<script>
+
+function mostrarFato(){
+    var ano = Number(inputAno.value);
+    var mensagem = '';
+
+    if(ano < 1965){
+        mensagem = `No ano ${ano} o email nem havia sido criado ainda ...`
+    } else if(ano == 1965){
+        mensagem = `No ano ${ano} o email estava sendo criado ... `
+    } else if(ano <= 1969){
+        mensagem = `No ano ${ano} o email já havia sido criado ...`
+    } else{
+        mensagem = `No ano ${ano} o email já havia sido aprimorado - Poderia sr enviado para outro computador ...`
+    }
+        divResultado.innerHTML = mensagem
+}
+
+
+</script>
