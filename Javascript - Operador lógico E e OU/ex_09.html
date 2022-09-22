@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_09</title>
+</head>
+<body>
+    <select id="selectArroz">
+        <option value="0"></option>
+        <option value="1">Integral</option>
+        <option value="2">Branco</option>
+    </select><br>
+    Quanto tempo o arroz cozinhou(em minutos):<input id="inputTempo"><br>
+    Qual a quantidade de sal utilizada(em gramas): <input id="inputSal"><br>
+    <button onclick="verArroz()">Avaliar arroz</button>
+    <div id="divResultado"></div><
+</body>
+</html>
+
+<script>
+
+    function verArroz(){
+        var arroz = selectArroz.value;
+        var minutos = inputTempo.value;
+        var sal = inputSal.value;
+
+        var mensagem = '';
+        if(arroz == 2 && minutos == 10 && sal <= 10){
+            mensagem = `Arroz perfeito <img src="https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2022/07/26/1334925802-arroz-branco-18919-768x1024-768x540.jpg"/> `
+        } else if(arroz == 1 && minutos == 20 && sal <= 15){
+            mensagem = `Arroz perfeito <img src="https://www.cozinhatecnica.com/wp-content/uploads/2019/05/arroz-integral-soltinho.jpg">`
+        }else{
+            mensagem = `Seu arroz não está perfeito <img src="https://noticiasdatv.uol.com.br/media/uploads/erick-jacquin-freezer-bronca-pesadelo-na-cozinha-reproducao-band-min.jpg">`
+        }
+        divResultado.innerHTML = mensagem;
+}
+
+</script>

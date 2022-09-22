@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_05</title>
+</head>
+<body>
+    Insira o valor da sua renda individual: <input id="inputRenda"><br>
+    Insira o valor da sua renda familiar: <input id="inputFamiliar"><br>
+    <button onclick="verBeneficio()">Terei o benefício ?</button>
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+    function verBeneficio(){
+        var individual = inputRenda.value;
+        var rendaFamiliar = inputFamiliar.value;
+
+        if(individual <= 2000 || rendaFamiliar <= 3000){
+            mensagem = "Você terá direito ao auxilio";
+        }else{
+            mensagem = "Sem direito ao auxilio";
+        }
+        divResultado.innerHTML = mensagem;
+    }
+
+</script>

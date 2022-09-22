@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_06</title>
+</head>
+<body>
+    <select id="selectPagamento">
+        <option value="0"></option>
+        <option value="1">Dinheiro</option>
+        <option value="2">Cartão de débito</option>
+        <option value="3">Cartão de crédito</option>
+        <option value="4">Boleto</option>
+    </select>
+    <button onclick="analisar()">Analisar compra</button>
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+function analisar(){
+    var mensagem = ''; 
+    var metodo = selectPagamento.value;
+
+    if(metodo == 1 || metodo == 2){
+        mensagem = "Você terá que pagar a vista"
+    } else if(metodo == 3 || metodo == 4){
+        mensagem = "Pagamento poderá ser parcelado"
+    } else{
+        mensagem = "Selecione um metodo de pagamento"
+    }
+    alert(mensagem);
+
+}
+
+</script>
