@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_03</title>
+</head>
+<body>
+    Selecione o time de São Paulo que você torce: 
+    <select name="" id="selectTime">
+        <option value="0"></option>
+        <option value="Corinthians">Corinthians</option>
+        <option value="São Paulo">São Paulo</option>
+        <option value="Palmeiras">Palmeiras</option>
+        <option value="Santos">Santos</option>
+    </select> 
+    <button onclick="verEscudo()">Ver escudo</button>
+    <div id="divResultado"></div>
+</body>
+</html>
+<script>
+    function verEscudo(){
+        var time = selectTime.value;
+        var img = '';
+        if(time == 'Corinthians'){
+           img = `<img width="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsfqda2p7UHeIQBEo-Avc4Fnc-EGrutnEJgBvZmAk&s">`
+        }else if(time == 'São Paulo'){
+            img = `<img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg">`
+        }else if(time == 'Palmeiras'){
+            img = `<img width="200px" src="https://cf.shopee.com.br/file/d2133be6855ec15fc3fc7160e1b4adee">`
+        }else if (time == 'Santos'){
+            img = `<img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Santos_logo.svg">`
+        }
+        divResultado.innerHTML = img;
+    }
+</script>
