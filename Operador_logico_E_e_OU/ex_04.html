@@ -10,23 +10,23 @@
     Selecione o que você come no café da manhã:
         <select id="selectCafe">
             <option value="0"></option>
-            <option value="1">Ovos</option>
-            <option value="2">Leite de arroz</option>
-            <option value="3">Bacon</option>
+            <option value="Ovos">Ovos</option>
+            <option value="Leite de arroz">Leite de arroz</option>
+            <option value="Bacon">Bacon</option>
         </select><br>
     Selecione o que você come no almoço:
         <select id="selectAlmoco">
             <option value="0"></option>
-            <option value="1">Bife</option>
-            <option value="2">Hamburger de soja</option>
-            <option value="3">Frango grelhado</option>
+            <option value="Bife">Bife</option>
+            <option value="Hamburger de soja">Hamburger de soja</option>
+            <option value="Frango grelhado">Frango grelhado</option>
         </select><br>
     Selecione o que você come na janta:
         <select id="selectJanta">
             <option value="0"></option>
-            <option value="1">Picanha de soja</option>
-            <option value="2">Cupim</option>
-            <option value="3">Coração</option><br>
+            <option value="Picanha de soja">Picanha de soja</option>
+            <option value="Cupim">Cupim</option>
+            <option value="Coração">Coração</option><br>
         </select>
     <button onclick="verificar()">Sou vegano?</button>
 </body>
@@ -38,7 +38,7 @@
         var almoco = selectAlmoco.value;
         var janta = selectJanta.value;
          
-        if(cafe == 2 && almoco == 2 && janta == 1){
+        if(cafe == 'Leite de arroz' && almoco == 'Hamburger de soja' && janta == 'Picanha de soja'){
             var mensagem = 'Sim, você é vegano!';
         } else{
             var mensagem = 'Não, você não é vegano';

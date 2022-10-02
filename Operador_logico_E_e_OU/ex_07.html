@@ -16,11 +16,10 @@
     var clique = 0;
     function cliques(){
         clique += 1;
-            var mensagem = `Você clicou ${clique} vezes e Juliana gosta desse número!`
+            var mensagem = `Você clicou ${clique} vezes!`
         if(clique == 3 || clique == 4 || clique == 7 || clique == 10 ){
-            divResultado.innerHTML = mensagem
-        } else{
-            divResultado.innerHTML = `Você clicou ${clique} vezes`
-        }
+            alert(`Você clicou ${clique} vezes e Juliana gosta desse número!`);
+        } 
+        divResultado.innerHTML = mensagem;
     }
 </script>

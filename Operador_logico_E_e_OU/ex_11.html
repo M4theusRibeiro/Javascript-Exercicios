@@ -21,10 +21,10 @@
 </html>
 
 <script>
+    var mensagem = '';
 function analisar(){
     var tv = selectTV.value;
     var preco = inputTV.value;
-
     if(preco < 800 || preco > 2000){
         mensagem = "TV fora da faixa de preço "
     } else if(preco >= 800 && preco <= 2000 && tv == 3 || tv == 4 ){
@@ -37,7 +37,6 @@ function analisar(){
 }
 function c3(){
     var preco = inputTV.value;
-    var mensagem = '';
     if(preco < 800){
         mensagem = "<br>Preço baixo demais!";
     }else if(preco > 2000){

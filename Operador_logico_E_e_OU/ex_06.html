@@ -9,10 +9,10 @@
 <body>
     <select id="selectPagamento">
         <option value="0"></option>
-        <option value="1">Dinheiro</option>
-        <option value="2">Cartão de débito</option>
-        <option value="3">Cartão de crédito</option>
-        <option value="4">Boleto</option>
+        <option value="Dinheiro">Dinheiro</option>
+        <option value="Cartão de débito">Cartão de débito</option>
+        <option value="Cartão de crédito">Cartão de crédito</option>
+        <option value="Boleto">Boleto</option>
     </select>
     <button onclick="analisar()">Analisar compra</button>
     <div id="divResultado"></div>
@@ -25,9 +25,9 @@ function analisar(){
     var mensagem = ''; 
     var metodo = selectPagamento.value;
 
-    if(metodo == 1 || metodo == 2){
+    if(metodo == 'Dinheiro' || metodo == 'Cartão de débito'){
         mensagem = "Você terá que pagar a vista"
-    } else if(metodo == 3 || metodo == 4){
+    } else if(metodo == 'Cartão de crédito' || metodo == 'Boleto'){
         mensagem = "Pagamento poderá ser parcelado"
     } else{
         mensagem = "Selecione um metodo de pagamento"

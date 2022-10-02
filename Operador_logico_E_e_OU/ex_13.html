@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_13</title>
+</head>
+<body>
+    Insira a nota da avaliação do atendente: <input id="inputNota"><br>
+    <button onclick="avaliarAtendente()">Avaliar</button><br>
+    <div id="divResultado"></div>
+</body>
+</html>
+<script>
+function avaliarAtendente(){
+     var nota = inputNota.value;
+     var imagem = ``;
+     var estrelaVazia = `<img width ='100px' src="https://icones.pro/wp-content/uploads/2021/02/icone-etoile-grise.png"/>`;
+     var meiaEstrela = `<img width ='100px' src="https://apostas.ogol.com.br/static/wp/icone-amarelo-estrela-3-quartos.svg">`;
+     var estrela = `<img width ='100px' src="https://apostas.ogol.com.br/static/wp/icone-amarelo-estrela.svg">`;
+
+     if(nota < 0 || nota > 5){
+        alert("Nota inválida");
+     } else if(nota <= 0.5){
+         imagem = `${estrelaVazia + estrelaVazia + estrelaVazia + estrelaVazia + estrelaVazia }`;
+     } else if(nota >= 0.5 && nota < 1){
+         imagem = `${meiaEstrela + estrelaVazia + estrelaVazia + estrelaVazia + estrelaVazia }`;
+     } else if(nota >= 1 && nota < 1.5){
+         imagem = `${estrela + estrelaVazia + estrelaVazia + estrelaVazia + estrelaVazia }`;
+     } else if(nota >= 1.5 && nota < 2){
+         imagem = `${estrela + meiaEstrela + estrelaVazia + estrelaVazia + estrelaVazia }`;
+     } else if(nota >= 2 && nota < 2.5){
+         imagem = `${estrela + estrela + estrelaVazia + estrelaVazia + estrelaVazia }`;
+     } else if(nota >= 2.5 && nota < 3){
+         imagem = `${estrela + estrela + meiaEstrela + estrelaVazia + estrelaVazia }`;
+     } else if(nota >= 3 && nota < 3.5){
+         imagem = `${estrela + estrela + estrela + estrelaVazia + estrelaVazia }`;
+     } else if(nota >= 3.5 && nota < 4){
+         imagem = `${estrela + estrela + estrela + meiaEstrela + estrelaVazia }`;
+     } else if(nota >= 4 && nota < 4.5){
+         imagem = `${estrela + estrela + estrela + estrela + estrelaVazia }`;
+     } else if(nota >= 4.5 && nota < 5){
+         imagem = `${estrela + estrela + estrela + estrela + meiaEstrela }`;
+     } else {
+         imagem = `${estrela + estrela + estrela + estrela + estrela }`;
+     }
+     divResultado.innerHTML = imagem
+}
+</script>
