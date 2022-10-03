@@ -19,8 +19,29 @@
         <option value="9">9</option>
     </select>
 
-    A tabuada deve ser feita até que número
+    Insira até que número deseja ver da tabuada: <input id="inputTabuada">
+    <button onclick="tabuada()">Ver Tabuada</button>
+    <div id="divResultado"></div>
 </body>
 </html>
 
-<script></script>
+<script>
+
+    function tabuada(){
+        var nTabuada = Number(selectTabuada.value)
+        var nDesejado = Number(inputTabuada.value)
+        numero = 1;
+        while(numero++ < nDesejado){
+            if(numero % 2 == 0){
+                divResultado.innerHTML += `<span style="color:blue">${nTabuada} x ${numero} = ${numero * nTabuada}<br></span>
+                
+                `
+            }else{
+                divResultado.color = "red"
+                divResultado.innerHTML += `<span style="color:red">
+                ${nTabuada} x ${numero} = ${numero * nTabuada}<br></span>
+                `
+            }
+        }
+    }
+</script>

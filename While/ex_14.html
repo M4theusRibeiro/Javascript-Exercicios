@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_14</title>
+</head>
+<body>
+    Digite sua idade: <input onkeyup="idInput()" id="inputIdade"><br>
+    <div id="divResultado"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function idInput(){
+        numero = 0;
+        nDigitado = Number(inputIdade.value)
+        while(numero < nDigitado){
+            if(numero < 5){
+                divResultado.innerHTML += `${numero} anos (Primeira Infância) <br>`
+            }else if(numero <= 6){
+                divResultado.innerHTML += `${numero} anos (Pré-escolar) <br>`
+            }
+            numero++
+        }
+    }
+</script>

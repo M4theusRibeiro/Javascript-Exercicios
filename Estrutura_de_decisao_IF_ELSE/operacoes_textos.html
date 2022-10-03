@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    Frase: <input onkeyup="transformacoes()" id="ipt_frase" />
+    <br />
+    Primeira letra: <span id="span_primeira_letra"></span>
+    <br />
+    Última letra: <span id="span_ultima_letra"></span>
+    <br />
+    Email valido?: <span id="span_tem_arroba">Não</span>
+    <br />
+    Começa com a ? <span id="span_comeca_correto">Não</span>
+    <br />
+    Termina com .com.br ? <span id="span_termina_correto">Não</span>
+    <br />
+    Primeira letra "E" trocada: <span id="span_letra_trocada"></span>
+    <br />
+    Todas letras "A" trocadas: <span id="span_todas_letras_trocadas"></span>
+    <br />
+    Frase, em minúsculo: <span id="frase_minusculo"></span>
+    <br />
+    Frase, em maiusculo: <span id="frase_maiusculo"></span>
+  </body>
+</html>
+
+<script>
+  function transformacoes() {
+    var frase = ipt_frase.value;
+
+    span_primeira_letra.innerHTML = frase[0];
+
+    span_ultima_letra.innerHTML = frase[frase.length - 1];
+
+    if (frase.indexOf("@") > -1) {
+      span_tem_arroba.innerHTML = "Tem arroba !";
+    } else {
+      span_tem_arroba.innerHTML = "Não tem arroba !";
+    }
+
+    frase_minusculo.innerHTML = frase.toLowerCase();
+    frase_maiusculo.innerHTML = frase.toUpperCase();
+
+    var comeca_com_a = frase.startsWith("a");
+    if (!comeca_com_a) {
+      span_comeca_correto.innerHTML = "Não";
+    } else {
+      span_comeca_correto.innerHTML = "Sim";
+    }
+
+    if (frase.endsWith(".com.br") == true) {
+      span_termina_correto.innerHTML = "Sim";
+    } else {
+      span_termina_correto.innerHTML = "Não";
+    }
+
+    span_letra_trocada.innerHTML = frase.toLowerCase().replace("E", "3");
+
+    span_todas_letras_trocadas.innerHTML = frase
+      .toLowerCase()
+      .replace("a", "@");
+  }
+</script>

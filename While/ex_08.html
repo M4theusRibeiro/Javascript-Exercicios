@@ -21,8 +21,10 @@
         if(nDigitado < 0 || nDigitado > 200){
             alert("Digite outro número, por favor")
         }else{
-            while(n){
-
+            while(n++ < nDigitado){
+                if(n % 7 == 0){
+                    divResultado.innerHTML += `${n}<br>`
+                }
             }
         }
     }
