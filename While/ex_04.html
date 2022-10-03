@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_04</title>
+</head>
+<body>
+    <button onclick="numPares()">S2 Pares</button>
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+    function numPares(){
+        var numero = 0;
+        var par = 0;
+        while(numero < 50){
+            par += 2;
+            divResultado.innerHTML += `${par}<br>`
+            numero +=1;
+        }
+    }
+</script>

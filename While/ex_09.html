@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_09</title>
+</head>
+<body>
+        Digite um número:<input id="inputNum"><br>
+        Digite uma frase:<input id="inputFrase"><br>
+        <button onclick="papagaio()">Papagaio</button>
+</body>
+</html>
+
+<script>
+
+    function papagaio(){
+        var frase = inputFrase.value;
+        var n = 1;
+        var numero = Number(inputNum.value);
+        if(frase.length < 3){
+            alert("Digite outra frase, por favor")
+        } else{
+            while(n <= numero){
+                alert(frase);
+                n +=1;
+            }
+        }
+    }
+
+</script>

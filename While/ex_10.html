@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_10</title>
+</head>
+<body>
+    Digite quantos titulos mundias da FIFA seu clube tem:<input id="inputMundiais"><br>
+    <button onclick="verTrofeus()">Ver troféus de mundiais FIFA</button><br>
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+    function verTrofeus(){
+        var mundial = Number(inputMundiais.value);
+        var n = 1;
+
+        if(mundial <= 0){
+            divResultado.innerHTML = `<img width="500px" src="https://jpimg.com.br/uploads/2018/03/torcedores-7a1-estadaoconteudo.jpg">`
+        }else{
+            while(n <= mundial){
+                divResultado.innerHTML += `<img width="500px"src="https://static.vecteezy.com/ti/vetor-gratis/p3/6425320-design-plano-trofeu-trofeu-isolado-em-fundo-branco-grátis-vetor.jpg">`
+                n+=1;
+            }
+        }
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_02</title>
+</head>
+<body>
+    <button onclick="mostrarFrase()">Diga algo sobre a quarentena</button>
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+function mostrarFrase(){
+    var numero = 0;
+        while (numero < 7){
+            divResultado.innerHTML += `Bento um dia disse: Quarentena quê nada, quarentena já passou. Agora é oitentena<br>`
+            numero +=1;
+        }
+    }
+
+
+</script>
