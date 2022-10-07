@@ -16,27 +16,29 @@
 <script>
     
     function mostrarRotina(){
-        var nDias = Number(inputDias.value)
-        var dias = 1;
-        var numero = 1;
-
+        var qtdDias = Number(inputDias.value)
+        var dia = 2;
+        var diasPassados = 1;
+        var ultimoDia = 30
+        
         divResultado.innerHTML = `
-                Dia ${numero++} - Musculação<br>
-                `
-
-        while(numero <= 30){
-            if(dias == nDias){
+        Dia 1 - Musculação<br>
+        `
+        
+        while(dia <= ultimoDia){
+            if(diasPassados == qtdDias){
                 divResultado.innerHTML += `
-                Dia ${numero} - Musculação<br>
+                Dia ${dia} - Musculação<br>
                 `
-              dias = 0  
+              diasPassados = 0  
             }else{
                 divResultado.innerHTML += `
-                Dia ${numero} - Comer, dormir etc<br>
+                Dia ${dia} - Comer, dormir etc<br>
                 `
             }
-            dias++
-            numero++
+            
+            diasPassados++
+            dia++
         }
     }
 </script>

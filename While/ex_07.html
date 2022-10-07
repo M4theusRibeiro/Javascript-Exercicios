@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex_07</title>
 </head>
+
 <body>
     Digite um número (tem que ser entre 20 e 100)<input id="nDigitado"><br>
     <button onclick="contar()">Adoro múltiplos de 5</button><br>
     <div id="divResultado"></div>
-    
+
 </body>
+
 </html>
 
 <script>
-function contar(){
-    var numero = Number(nDigitado.value)
-    
-    var cinco = 0;
-    if(numero < 20 ||numero > 100){
-        alert("Digite outro número, por favor.")
+    function contar() {
+        var numero = Number(nDigitado.value)
+
+        var cinco = 0;
+        if (numero < 20 || numero > 100) {
+            alert("Digite outro número, por favor.")
+        } else {
+            while (cinco < numero) {
+                cinco += 5
+                divResultado.innerHTML += `${cinco}<br>`
+
+            }
+        }
+
     }
-    while(cinco < numero){
-        cinco += 5
-        divResultado.innerHTML += `${cinco}<br>`
-        
-    }
-}
 </script>

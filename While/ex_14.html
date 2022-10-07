@@ -16,13 +16,24 @@
 <script>
 
     function idInput(){
+        divResultado.innerHTML = ""
         numero = 0;
         nDigitado = Number(inputIdade.value)
-        while(numero < nDigitado){
+        while(numero <= nDigitado){
             if(numero < 5){
                 divResultado.innerHTML += `${numero} anos (Primeira Infância) <br>`
             }else if(numero <= 6){
                 divResultado.innerHTML += `${numero} anos (Pré-escolar) <br>`
+            }else if(numero <= 10) {
+                divResultado.innerHTML += `${numero} anos (Segunda Infância) <br>`
+            }else if(numero <= 18) {
+                divResultado.innerHTML += `${numero} anos (Adolescência) <br>`
+            }else if(numero <= 50) {
+                divResultado.innerHTML += `${numero} anos (Adulto) <br>`
+            }else if(numero <= 100) {
+                divResultado.innerHTML += `${numero} anos (Melhor idade) <br>`
+            }else{
+                divResultado.innerHTML += `${numero} anos (Ancião) <br>`
             }
             numero++
         }
