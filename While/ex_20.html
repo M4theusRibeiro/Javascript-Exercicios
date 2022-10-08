@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_20</title>
+</head>
+<body>
+    <button onclick="curto()">Curto 3 e 5!</button>
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+    function curto(){
+        var contador = 1;
+        var nMax = 100
+        while (contador <= nMax){
+            if(contador % 3 == 0 && contador % 5 == 0){
+                divResultado.innerHTML +=  `É TRI!É PENTA!<br>`
+
+            }else if(contador % 3 == 0){
+                divResultado.innerHTML +=  `É TRI!<br>`
+            }else if(contador % 5 == 0){
+                divResultado.innerHTML +=  `É PENTA!<br>`
+            }else{
+                divResultado.innerHTML += `${contador}<br>`
+            }
+           
+           contador ++
+        }
+    }
+</script>

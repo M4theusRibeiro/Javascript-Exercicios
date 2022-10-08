@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_18</title>
+</head>
+<body>
+    Pergunte ao usuário quantos ônibus precisa pegar:<input id="inputQtdBus"><br>
+    Pergunte ao usuário quantos trens precisa pegar:<input id="inputQtdTrem"><br>
+    Pergunte ao usuário quantos metrôs precisa pegar:<input id="inputQtdMetro"><br>
+    <button onclick="partiu()">#Partiu Trajeto</button><br>
+    <div id="divResultado"></div>
+</body>
+</html>
+
+<script>
+
+    function partiu(){
+        var bus = Number(inputQtdBus.value);
+        var trem = Number(inputQtdTrem.value);
+        var metro = Number(inputQtdMetro.value);
+        var contador = 1;
+
+        while(contador <= bus){
+                divResultado.innerHTML += `<span style="color:red">Pegando o ${contador}º busão</span><br>`
+            contador++
+        }
+        contador = 1;
+        while(contador <= trem){
+            divResultado.innerHTML += `<span style="color:green">Pegando o ${contador}º trem</span><br>`
+            contador++
+        }
+        contador = 1;
+        while(contador <= metro){
+            divResultado.innerHTML += `<span style="color:blue">Pegando o ${contador}º metrô</span><br>`
+            contador++
+        }  
+    }
+</script>
