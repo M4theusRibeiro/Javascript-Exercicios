@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_02</title>
+</head>
+<body>
+    Digite um lugar que você já viajou:<input id="inputViagem"><br>
+    <button onclick="cadastrar()">Cadastrar local</button><br>
+    Relembrar uma viagem: <input id="inputRelembrar"><br>
+    <button onclick="relembrar()">Relembrar viagem</button>
+    <div id="exibirLocal"></div>
+</body>
+</html>
+
+<script>
+
+var listaLugares = [1];
+    function cadastrar(){   
+        var viagem = inputViagem.value
+        listaLugares.push(viagem);
+        
+    }
+
+    function relembrar(){
+        var viagem = inputRelembrar.value;
+        var relembrarViagem = listaLugares[inputRelembrar.value];
+
+
+        if (listaLugares.length < viagem) {
+        exibirLocal.innerHTML += "Ainda não existe";
+        } else {
+            exibirLocal.innerHTML += 
+            `
+            ${inputRelembrar.value} Viagem - 
+            ${relembrarViagem }<br>
+            `
+        }
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_04</title>
+</head>
+<body>
+   Insira os filmes que você mais gosta: <input id="inputFilmes"><br>
+   <button onclick="cadastrar()">Cadastrar</button>
+   <div id="filmesPreferidos"></div>
+</body>
+</html>
+
+<script>
+
+var listaFilmes=[];
+function cadastrar(){
+        const filmes = inputFilmes.value;
+        listaFilmes.push(filmes);
+        for(var i = 0; i < listaFilmes.length; i++){
+            if(i % 2 == 0){
+                filmesPreferidos.innerHTML += `<span style="color: blue;">${listaFilmes[i]}</span><br>` 
+            }else{
+                filmesPreferidos.innerHTML += `<span style="color: red;">${listaFilmes[i]}</span><br>`
+            }
+        }
+}
+</script>

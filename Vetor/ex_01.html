@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Filme: <input id="input_filme" /><br />
+    <button onclick="cadastrar()">Cadastrar</button>
+    <div id="div_resultado"></div>
+  </body>
+</html>
+
+<script>
+  var lista_filmes = [];
+  function cadastrar() {
+    var filme = input_filme.value;
+    lista_filmes.push(filme);
+
+    var terceiro_filme = "";
+    if (lista_filmes.length >= 3) {
+      terceiro_filme = lista_filmes[2];
+    } else {
+      terceiro_filme = "Ainda não existe";
+    }
+
+    div_resultado.innerHTML = `
+                Seu filme favorito: ${lista_filmes[0]}
+                <br>
+                Seu 3º filme favorito: ${terceiro_filme}
+                <br>
+                Total de filmes cadastrados: ${lista_filmes.length}
+                
+                `;
+  }
+</script>
+
+</body>
+</html>
