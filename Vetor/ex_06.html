@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_06</title>
+</head>
+<body>
+    Cadastrar novo aluno: <input id="inputAluno"><button onclick="cadastrar()">Cadastrar Aluno</button><br>
+    Verificar aluno: <input id="inputVerificarAluno"><button onclick="verificar()">Verificar Aluno</button><br>
+    <div id="mostrarAluno"></div>
+</body>
+</html>
+
+<script>
+var listaAlunos = []
+    function cadastrar(){
+        var cadastro = inputAluno.value;
+        if(listaAlunos.length == 0){
+           listaAlunos.push(cadastro)
+        }
+        else{
+            for(var i = 0; i< listaAlunos.length; i++){
+                if(cadastro == listaAlunos[i]){
+                    mostrarAluno.innerHTML += `$O aluno ${cadastro} já existe na lista<br>`
+                }
+                else{
+                    listaAlunos.push(cadastro)
+                    mostrarAluno.innerHTML += `${cadastro}<br>`
+                    } 
+                }
+            }
+     
+}
+        
+
+    function verificar(){
+        var alunoExistente = inputVerificarAluno.value;
+            for(var i = 0; i < listaAlunos.length; i++){
+                if(alunoExistente == listaAlunos[i]){
+                   alert(`$O aluno ${alunoExistente} já existe na lista<br>`)
+                }
+            } 
+    }
+
+</script>

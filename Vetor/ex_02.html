@@ -17,7 +17,7 @@
 
 <script>
 
-var listaLugares = [1];
+var listaLugares = [];
     function cadastrar(){   
         var viagem = inputViagem.value
         listaLugares.push(viagem);
@@ -25,17 +25,15 @@ var listaLugares = [1];
     }
 
     function relembrar(){
-        var viagem = inputRelembrar.value;
-        var relembrarViagem = listaLugares[inputRelembrar.value];
+        var relembrarViagem = Number(inputRelembrar.value);
 
-
-        if (listaLugares.length < viagem) {
+        if (listaLugares.length <= viagem) {
         exibirLocal.innerHTML += "Ainda não existe";
         } else {
             exibirLocal.innerHTML += 
             `
             ${inputRelembrar.value} Viagem - 
-            ${relembrarViagem }<br>
+            ${listaLugares[relembrarViagem-1]}<br>
             `
         }
     }

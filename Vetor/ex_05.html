@@ -7,15 +7,25 @@
     <title>ex_05</title>
 </head>
 <body>
-    Digite o nome do aluno: <input onkeyup="cadastrar()" id="inputAluno"><br>
-    
+    Digite o nome do aluno: <input = id="inputAluno"><br>
+    <button onclick="cadastrar()">Cadastrar aluno</button>
+    <div id="nomeAlunos"></div>
 </body>
 </html>
 
 <script>
 
-listaAlunos = [];
+var listaAlunos = [];
     function cadastrar(){
-        
+        const aluno = inputAluno.value;
+        listaAlunos.push(aluno);
+        var contadorReverso = listaAlunos.length-1;
+        for(var i = 0; i<listaAlunos.length;i++){
+           
+            nomeAlunos.innerHTML += `${listaAlunos[contadorReverso-i]}<br>` 
+            
+        }
+
+
     }
 </script>
